@@ -1,6 +1,5 @@
 package step_definitions;
 
-import hooks.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -58,7 +57,7 @@ public class Login {
     }
 
     @Then("je suis redirigé vers la page de mon compte")
-    public void jeSuisRedirigéVersLaPageDeMonCompte() {
+    public void jeSuisRedirigeVersLaPageDeMonCompte() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         assertTrue(
                 wait.until(ExpectedConditions.urlContains("route=account/account"))
