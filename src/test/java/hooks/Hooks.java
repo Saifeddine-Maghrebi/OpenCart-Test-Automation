@@ -8,6 +8,8 @@ import page_factory.Home_page;
 import page_factory.Login_page;
 import page_factory.SearchAdd_page;
 
+import java.time.Duration;
+
 public class Hooks {
 
     public static WebDriver driver;
@@ -17,6 +19,7 @@ public class Hooks {
 
         driver = new EdgeDriver();
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://awesomeqa.com/ui/index.php?route=common/home");
 
         Home_page homePage = new Home_page(driver);

@@ -26,6 +26,7 @@ public class Login {
 
         driver = new EdgeDriver();
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://awesomeqa.com/ui/index.php?route=common/home");
         homePage = new Home_page(driver);
     }
